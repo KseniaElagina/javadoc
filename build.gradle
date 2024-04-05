@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'pmd'
+}
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+}
+
+javadoc{
+    failOnError = false
+}
+
+pmd {
+    toolVersion = "6.39.0"
+    ruleSets = []
+    ruleSetFiles = files("pmd.xml")
+    ignoreFailures = true
+}
